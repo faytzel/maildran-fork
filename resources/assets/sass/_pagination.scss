@@ -1,0 +1,37 @@
+#content .pagination {
+    margin-top: 20px;
+    padding-left: 0;
+    li {
+        display: inline-block;
+        margin-right: 5px;
+        a, span {
+            display: block;
+            padding: 5px 10px;
+        }
+        a {
+            color: $color-secondary;
+            border: 1px solid $color-secondary;
+            @include btn-color($color-white);
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &.active {
+            span {
+                color: $color-white;
+                border: 1px solid $color-primary;
+                @include btn-color($color-primary);
+            }
+        }
+        &.disabled {
+            span {
+                color: $color-white;
+                border: 1px solid $color-secondary;
+                background: $color-secondary;
+            }
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

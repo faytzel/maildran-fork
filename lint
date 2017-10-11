@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+echo "Running...\n";
+
+exec('./vendor/bin/phpcs --standard="psr.xml"', $output);
+if (count($output) > 0) {
+    foreach ($output as $item) {
+        echo $item . "\n";
+    }
+} else {
+    echo 'All right!!!';
+}
+
+exit("\nFinish!\n");

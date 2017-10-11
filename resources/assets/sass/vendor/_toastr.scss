@@ -1,0 +1,17 @@
+#toast-container {
+    .toast {
+        min-width: 300px;
+        width: auto;
+        opacity: 1;
+        .toast-message {
+            ul {
+                li {
+                    margin-bottom: 5px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

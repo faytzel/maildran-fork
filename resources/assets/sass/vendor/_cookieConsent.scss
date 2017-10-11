@@ -1,0 +1,17 @@
+body {
+    .cc-window.cc-bottom {
+        padding: 15px 20px;
+        .cc-message {
+            line-height: 1.3em;
+        }
+        .cc-btn.cc-allow {
+            margin-left: 0;
+        }
+        .cc-btn.cc-dismiss {
+            display: none;
+        }
+    }
+    .cc-revoke {
+        display: none;
+    }
+}

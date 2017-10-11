@@ -1,0 +1,29 @@
+#footer {
+    margin: 40px 40px 200px 40px;
+    padding-top: 20px;
+    border-top: 1px solid $border-color-light;
+    text-align: center;
+    ul {
+        li {
+            display: inline-block;
+            border-right: 1px solid $border-color-light;
+            padding: 0 10px 5px 10px;
+            a {
+                color: $color-secondary;
+                .fa-facebook {
+                    color: $color-facebook;
+                }
+                .fa-twitter {
+                    color: $color-twitter;
+                }
+            }
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                border-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}

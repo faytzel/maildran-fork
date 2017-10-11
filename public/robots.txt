@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+/register/success
+/contact/success
+/password/reset/*
+/vcard/*
+/workflow/*

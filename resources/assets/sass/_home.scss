@@ -1,0 +1,215 @@
+#home {
+    h1 {
+        font-weight: bold;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1.3em;
+    }
+
+    #home-header {
+        padding-top: 20px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+        #home-header-image {
+            float: left;
+            width: 300px;
+            margin-right: -300px;
+            img {
+                width: 100%;
+                height: auto
+            }
+        }
+        #home-header-title {
+            float: left;
+            padding-left: 340px;
+            h1 {
+                color: $color-white;
+                margin-bottom: 20px;
+                margin-top: 20px;
+                text-align: right;
+                font-size: 4em;
+            }
+        }
+        #home-header-background {
+            position: absolute;
+            z-index: -1;
+            top: 33px;
+            left: 0;
+            right: 0;
+            background: $color-primary;
+            height: 332px;
+        }
+    }
+
+    /* FEATURES */
+
+    #features {
+        .feature {
+            width: 49%;
+            display: inline-block;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            vertical-align: top;
+        }
+        .feature-icon {
+            color: $color-primary;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .feature-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .feature-description {
+            font-size: 1.1em !important;
+            margin: 0;
+            color: $text-color-light;
+        }
+    }
+
+    #home-form {
+        border-top: 5px solid $color-primary;
+        text-align: center;
+        padding-top: 40px;
+        h2 {
+            margin-top: 0;
+        }
+        input[type="email"] {
+            padding: 10px 20px;
+            border: 1px solid $form-border-color;
+            width: 300px;
+        }
+        .checkbox {
+            font-size: 0.8em;
+        }
+        button {
+            padding: 11px 20px;
+            width: auto;
+        }
+    }
+
+    #subscribe {
+        border-top: 5px solid $color-primary;
+        padding-top: 40px;
+        margin-top: 40px;
+        text-align: center;
+        #subscribe-telegram {
+            @include btn-color($color-telegram);
+        }
+        #subscribe-newsletter {
+            @include btn-color($color-newsletter);
+        }
+    }
+
+    /* MEDIA QUERIES */
+
+
+    @media (max-width: 1100px) {
+        #home-header {
+            #home-header-image {
+                width: 250px;
+                margin-right: -250px;
+            }
+            #home-header-title {
+                padding-left: 270px;
+                h1 {
+                    font-size: 3.5em;
+                    margin-top: 50px;
+                }
+            }
+            #home-header-background {
+                height: 282px;
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        #home-header {
+            #home-header-title {
+                h1 {
+                    font-size: 3em;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $app-mobile-width) {
+        #home-header {
+            #home-header-image {
+                width: 150px;
+                margin-right: -150px;
+            }
+            #home-header-title {
+                padding-left: 170px;
+                h1 {
+                    font-size: 2em;
+                    margin-top: 20px;
+                }
+            }
+            #home-header-background {
+                height: 181px;
+            }
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.3em;
+        }
+
+        #features {
+            .feature {
+                width: 100%;
+            }
+        }
+
+        #home-form {
+            input[type="email"] {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            button {
+                margin-top: 2px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        #home-header {
+            #home-header-image {
+                width: 100px;
+                margin-right: -100px;
+            }
+            #home-header-title {
+                padding-left: 120px;
+                h1 {
+                    font-size: 1.5em;
+                    margin-top: 0;
+                }
+            }
+            #home-header-background {
+                height: 130px;
+            }
+        }
+    }
+
+    @media (max-width: 350px) {
+        #home-header {
+            #home-header-title {
+                h1 {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

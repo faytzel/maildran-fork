@@ -1,0 +1,28 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+// variables and mixins
+@import "variables";
+@import "mixins";
+
+// modules
+@import "node_modules/normalize.css/normalize";
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "node_modules/toastr/build/toastr";
+@import "node_modules/sweetalert2/dist/sweetalert2";
+@import "node_modules/cookieconsent/build/cookieconsent.min";
+@import "node_modules/flatpickr/dist/flatpickr.min";
+
+// vendor
+@import "vendor/toastr";
+@import "vendor/cookieConsent";
+
+// custom
+@import "default";
+@import "form";
+@import "header";
+@import "content";
+@import "footer";
+@import "pagination";
+@import "home";
+@import "reminder";

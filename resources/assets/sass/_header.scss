@@ -1,0 +1,88 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $color-primary;
+    border-bottom: 1px solid $color-white;
+    #header-menu {
+        position: relative;
+        max-width: $app-width;
+        margin: 0 auto;
+        a {
+            color: $color-white;
+            text-decoration: none;
+        }
+        #header-menu-back-home {
+            a {
+                padding: 9px 0;
+                display: inline-block;
+            }
+        }
+        #header-menu-btn {
+            a {
+                font-size: 1.5em;
+                padding: 5px 0;
+                display: inline-block;
+            }
+        }
+        #header-menu-submenu {
+            position: absolute;
+            top: 37px;
+            right: 0;
+            display: none;
+            padding: 0;
+            margin: 0;
+            background: $color-white;
+            border-left: 4px solid $color-primary;
+            border-right: 4px solid $color-primary;
+            border-bottom: 4px solid $color-primary;
+            > li {
+                padding-left: 0;
+                list-style: none;
+                > a {
+                    display: block;
+                    padding: 10px 20px;
+                    color: $color-primary;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                    &#header-menu-btn-close {
+                        font-size: 0.9em;
+                        &:hover {
+                            text-decoration: none;
+                            span {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #header-logo {
+        display: inline-block;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        img {
+            width: auto;
+            height: 20px;
+        }
+    }
+    #header-loader {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        margin-left: -9px;
+        color: $color-white;
+    }
+}
+
+@media (max-width: ($app-width + 40)) {
+    #header {
+        #header-menu {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

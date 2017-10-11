@@ -1,0 +1,12 @@
+@mixin btn-color($color) {
+    background: $color;
+    &[disabled] {
+        background: lighten($color, 10%);
+        &:hover {
+            background: lighten($color, 10%);
+        }
+    }
+    &:hover {
+        background: darken($color, 10%);
+    }
+}

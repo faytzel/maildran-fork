@@ -1,0 +1,44 @@
+.reminder {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted $color-secondary;
+    .reminder-message {
+        margin-bottom: 15px;
+        line-height: 1.4em;
+    }
+    .reminder-footer {
+        font-size: 0.8em;
+        ul {
+            padding-left: 0 !important;
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                &.reminder-notified-at {
+                    color: $color-success;
+                }
+                &.reminder-scheduled-at {
+                    color: $color-info;
+                }
+                &.reminder-delete {
+                    a {
+                        color: $color-danger;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            &.left {
+                width: 50%;
+            }
+            &.right {
+                width: 50%;
+                text-align: right;
+            }
+        }
+    }
+    &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+    }
+}
