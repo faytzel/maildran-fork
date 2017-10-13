@@ -51,7 +51,7 @@ class HttpClientService
                 'auth'    => $auth,
             ];
 
-            // al correr los test, no verificar el vertificado ssl
+            // al correr los test, no verificar el certificado ssl
             if (App::runningUnitTests()
                 && preg_match('/^https\:\/\/' . preg_quote(Config::get('app.domains.web'), '/') . '/', $url)) {
                 $options['verify'] = false;

@@ -1,0 +1,33 @@
+os:
+  - linux
+
+language: php
+
+php:
+  - 7.1
+
+services:
+  - mysql
+
+sudo: false
+
+addons:
+  hosts:
+    - maildran.app
+    - api.maildran.app
+
+before_install:
+  - cp .env.travis .env
+  - mysql -e 'CREATE DATABASE maildran_test;'
+
+install:
+  - sudo apt-get install -y nodejs
+  - npm install npm@latest -g
+  - composer self-update
+  - composer install --prefer-dist --no-interaction --no-suggest
+  - npm install
+
+script:
+  - npm run production
+  - php lint
+  - vendor/bin/phpunit

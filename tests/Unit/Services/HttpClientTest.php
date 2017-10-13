@@ -6,7 +6,6 @@ namespace Tests\Unit\Services;
 
 use Tests\TestCase;
 use HttpClient;
-use URL;
 use stdClass;
 use SimpleXMLElement;
 
@@ -14,14 +13,14 @@ class HttpClientTest extends TestCase
 {
     public function testGetJson() : void
     {
-        $response = HttpClient::getJson(URL::route('test.json'));
+        $response = HttpClient::getJson('https://jsonfeed.org/feed.json');
 
         $this->assertInstanceOf(stdClass::class, $response);
     }
 
     public function testGetXml() : void
     {
-        $response = HttpClient::getXml(URL::route('test.xml'));
+        $response = HttpClient::getXml('https://jsonfeed.org/xml/rss.xml');
 
         $this->assertInstanceOf(SimpleXMLElement::class, $response);
     }
