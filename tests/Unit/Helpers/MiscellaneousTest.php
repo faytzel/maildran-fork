@@ -15,7 +15,12 @@ class MiscellaneousTest extends TestCase
 {
     public function testAppVersion() : void
     {
-        $this->assertRegExp('/^v[0-9]+\.[0-9]+\.[0-9]+$/', app_version());
+        $version = app_version();
+        if (is_null($version) || preg_match('/^v[0-9]+\.[0-9]+\.[0-9]+$/', $version)) {
+            $this->assertTrue(true);
+        } else {
+            $this->assertTrue(false);
+        }
     }
 
     public function testRepo() : void

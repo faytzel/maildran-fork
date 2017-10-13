@@ -7,6 +7,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App;
 use Config;
+use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,7 +24,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Comment the next line code if use MySQL v5.7.7 and higher
+        // https://laravel-news.com/laravel-5-4-key-too-long-error
+        Schema::defaultStringLength(191);
     }
 
     /**

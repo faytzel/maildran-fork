@@ -1,4 +1,4 @@
-# MailDran
+# MailDran [![Build Status](https://travis-ci.org/faytzel/maildran-fork.svg?branch=master)](https://travis-ci.org/faytzel/maildran-fork)
 
 MailDran permite enviar y recibir recordatorios sin salir de tu gestor de email favorito (funciona con cualquiera).
 
